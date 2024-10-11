@@ -3,7 +3,7 @@ public class Bioskop10 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        int harga = 50000, jmlTiket, tiketTerjual = 0;
+        int harga = 50000, jmlTiket, tiketTerjual = 0, hargaTiketTerjual = 0;
         double diskon = 0, totalHarga = 0, totalBayar;
         String namaPelanggan;
 
@@ -30,6 +30,7 @@ public class Bioskop10 {
             }
             totalBayar = totalHarga - (totalHarga * diskon);
             tiketTerjual += jmlTiket;
+            hargaTiketTerjual += totalBayar;
             sc.nextLine();
 
             System.out.println("----------------------------------");
@@ -37,6 +38,7 @@ public class Bioskop10 {
             System.out.println("----------------------------------");
             System.out.println("Total tiket terjual dalam sehari: " + tiketTerjual);
             System.out.println("----------------------------------");
+            System.out.println("Total harga tiket terjual dalam sehari:  " + hargaTiketTerjual);
 
         }
     }
